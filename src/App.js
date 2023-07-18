@@ -1,25 +1,25 @@
 import logo from './logo.svg';
 import './App.css';
-
+import Board from './../src/components/board/Board';
+// main component / entry component 
 function App() {
+
+
+  // this is where you write your js functionality or components 
+  // fetching data , manipulating data 
+
+ 
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+     // what the component should show 
+     // react fragment -> container that hosts the elements rendered out by a component 
+     <>
+     <div className='App'>
+         <Board title='Play My Tic Tac Toe Game' color='green'/>
+     </div>
+     </>
   );
+
 }
 
 export default App;

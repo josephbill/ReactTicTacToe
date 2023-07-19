@@ -1,24 +1,14 @@
+// to use state first import 
+import { useState } from 'react'
 import './styles.css'
 import '../../App.css'
 
-export default function Square({value}){
-
-    // function without info
-    // function handleClick() {
-    //     alert("I am clicked ")
-    // }
-
-    //function with info
-    function handleClick(value){
-        alert(value)
-    }
+export default function Square({value, onSquareClick}){
 
     return (
         <>
           {/* <button className='square' onClick={handleClick}> {value} </button> */}
-          <button className='square' onClick={() => {
-            handleClick(value)
-          }}> {value} </button>
+          <button className='square' onClick={onSquareClick}> {value} </button>
         </>
          
     )

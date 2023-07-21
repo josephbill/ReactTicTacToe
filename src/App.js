@@ -12,7 +12,7 @@ function App() {
 
   return (
      // what the component should show 
-     // react fragment -> container that hosts the elements rendered out by a component 
+     // react fragment -> container that hosts the elements rendered ou t by a component 
      <>
      <div className='App'>
          <Board title='Play My Tic Tac Toe Game' color='green'/>

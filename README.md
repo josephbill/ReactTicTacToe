@@ -68,3 +68,49 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+## TicToe section 
+
+### building the board 
+9 square brackets : click to insert a choice between x and o
+Board Component
+### building the square
+Square component 
+
+### state and event 
+an example of the handleClick on each square 
+
+- define and use a state. 
+
+// MOSTLY DONE WHEN REFACTORING. 
+
+- Lifting state up.  : this concept states that to collect data from multiple children or to have two child components communicate to each other , declare the shared state in the parent component. 
+The parent component can pass that state back down to the children via props. 
+This keeps the child components in sync with each other and with their parent. 
+
+- In our game , we need the board to maintain the state of the squares , 
+
+
+### Question , can you figure out the winner 
+
+- Pseudocode 
+- Complete code.
+
+Possible winners. 
+
+const lines = [
+    [0, 1, 2],
+    [3, 4, 5],
+    [6, 7, 8],
+    [0, 3, 6],
+    [1, 4, 7],
+    [2, 5, 8],
+    [0, 4, 8],
+    [2, 4, 6],
+  ];
+
+
+
+
+

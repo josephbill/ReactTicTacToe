@@ -16,6 +16,8 @@ export default function Board ({title, color}) {
     // define a state to keep track of the player 
     const [isNext, setIsNext] = useState(true)
 
+    
+
 
     // 1. this function should create a copy of our squares arrays. 
     // how do we create copies of arrays - reassignment , in build methods. 
@@ -25,7 +27,8 @@ export default function Board ({title, color}) {
 
         // returning early to stop overwriting 
         // this checks for if a click event has happened.
-        if (squares[i]){
+        if (squares[i] || calculateWinner(squares)){
+            alert("We have winner!")
              return;
         }
         // copy 
@@ -43,6 +46,41 @@ export default function Board ({title, color}) {
         setIsNext(!isNext)  //switching the value 
 
     }
+
+
+    // function to calculate the winner 
+
+    function calculateWinner(squares) {
+        // winner list 
+        const lines = [
+            [0, 1, 2],
+            [3, 4, 5],
+            [6, 7, 8],
+            [0, 3, 6],
+            [1, 4, 7],
+            [2, 5, 8],
+            [0, 4, 8],
+            [2, 4, 6]
+          ];
+
+          // pseudocode for getting  a winner 
+        //   1. Function to receive array , then using that array we need to match to the array elements which 
+        //   have possible winners
+        for(let i = 0; i < lines.length; i++) {
+            //destructing in JS , 
+            const [a,b,c] = lines[i]
+            // matching the value in the square with the index position 
+            if( squares[a] && squares[a] === squares[b] && squares[a] === squares[c] ){
+                alert("The winner is")
+                alert(squares[a])
+                return squares[a]
+            }
+            return null;
+            
+        }
+    }
+
+    
 
   
     return (
